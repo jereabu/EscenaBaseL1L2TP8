@@ -17,34 +17,48 @@ public class DialogoDaro : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
+        
     }
 
     // Update is called once per frame
     void Update()
     {
-        if(counter <= 6)
-        {
-            AvanzarDialogo.enabled = false;
-        }
+        
     }
     void OnTriggerEnter()
     {
+        if (counter >= 7)
+        {
+            AvanzarDialogo.enabled = false;
+        }
+        else
+        {
+            AvanzarDialogo.enabled = true;
+        }
         Cartel.enabled = true;
         dialogo.enabled = true;
         fondoNombre.enabled = true;
         Nombre.enabled = true;
-        AvanzarDialogo.enabled = true;
+        
         Debug.Log("entraste");
+        
            
     }
     void OnTriggerStay()
     {
-        if (Input.GetKeyDown(KeyCode.E) && counter <= 6)
+        if (Input.GetKeyDown(KeyCode.E) && counter <= 7)
         {
             Debug.Log("clickeaste");
-            counter++;
+            Debug.Log(dialogoArray[counter]);
             dialogo.text = dialogoArray[counter];
+            counter++;
+            Debug.Log(counter);
+            enRango = true;
+            
+        }   
+        if (counter <= 7)
+        {
+            AvanzarDialogo.enabled = false;
         }
     }
     void OnTriggerExit()
