@@ -4,33 +4,56 @@ using UnityEngine;
 using UnityEngine.UI;
 
 public class DialogoDaro : MonoBehaviour
-    
+
 {
     public GameObject Daro;
-    public GameObject dialogo;
-    public Button siguiente;
+    public Text dialogo;
+    public RawImage Cartel;
+    public Image fondoNombre;
+    public Text Nombre;
+    public Text AvanzarDialogo;
+    [SerializeField] int counter = 0;
+    [SerializeField] string[] dialogoArray = new string[] {"Hola amigo!", "No sé si te enteraste, probablemnente si, pero...", "Ahora en un rato es empatizando!", "Y los meps no llegaron...", "Tengo una idea!", "Podrias ayudarme a buscar los proyectos mas importantes?", "Tengo que... ordenarlos...", "¿Porque seguis aca? Anda!" }; 
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    void OnTriggerEnter(Collider other)
-    {
-        //al entrar activa la UI de diálogo
-        if (other.gameObject.CompareTag("NPC"))
+        if(counter <= 6)
         {
-            dialogo.SetActive(true);
+            AvanzarDialogo.enabled = false;
+        }
+    }
+    void OnTriggerEnter()
+    {
+        Cartel.enabled = true;
+        dialogo.enabled = true;
+        fondoNombre.enabled = true;
+        Nombre.enabled = true;
+        AvanzarDialogo.enabled = true;
+        Debug.Log("entraste");
+           
+    }
+    void OnTriggerStay()
+    {
+        if (Input.GetKeyDown(KeyCode.E) && counter <= 6)
+        {
+            Debug.Log("clickeaste");
+            counter++;
+            dialogo.text = dialogoArray[counter];
         }
     }
     void OnTriggerExit()
     {
-        dialogo.SetActive(false);
+        Cartel.enabled = false;
+        dialogo.enabled = false;
+        fondoNombre.enabled = false;
+        Nombre.enabled = false;
+        AvanzarDialogo.enabled = false;
     }
-
+    
 }

@@ -124,7 +124,7 @@ GameObject:
   - component: {fileID: 396156}
   - component: {fileID: 396155}
   m_Layer: 5
-  m_Name: Image
+  m_Name: FondoNombre
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -148,7 +148,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -63.899994, y: 40.199997}
+  m_AnchoredPosition: {x: -67.6, y: 49.4}
   m_SizeDelta: {x: 126.9595, y: 25}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &396155
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396153}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -185,6 +185,83 @@ CanvasRenderer:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 396153}
+  m_CullTransparentMesh: 0
+--- !u!1 &39585206
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 39585207}
+  - component: {fileID: 39585209}
+  - component: {fileID: 39585208}
+  m_Layer: 5
+  m_Name: DialogoDaro
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &39585207
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39585206}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1737217783}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 0.7999954, y: 0.80000305}
+  m_SizeDelta: {x: 261.7445, y: 70.65216}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &39585208
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39585206}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.19607843, g: 0.19607843, b: 0.19607843, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+  m_FontData:
+    m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
+    m_FontSize: 14
+    m_FontStyle: 0
+    m_BestFit: 0
+    m_MinSize: 10
+    m_MaxSize: 40
+    m_Alignment: 3
+    m_AlignByGeometry: 0
+    m_RichText: 1
+    m_HorizontalOverflow: 0
+    m_VerticalOverflow: 0
+    m_LineSpacing: 1
+  m_Text: 
+--- !u!222 &39585209
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 39585206}
   m_CullTransparentMesh: 0
 --- !u!1 &86514349
 GameObject:
@@ -757,7 +834,7 @@ GameObject:
   - component: {fileID: 905458570}
   - component: {fileID: 905458569}
   m_Layer: 5
-  m_Name: Text
+  m_Name: AvanzarDialogo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -779,7 +856,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 182, y: -71}
+  m_AnchoredPosition: {x: 146.4, y: -84.9}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &905458569
@@ -789,7 +866,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 905458567}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -802,10 +879,10 @@ MonoBehaviour:
       m_Calls: []
   m_FontData:
     m_Font: {fileID: 10102, guid: 0000000000000000e000000000000000, type: 0}
-    m_FontSize: 8
+    m_FontSize: 12
     m_FontStyle: 0
     m_BestFit: 0
-    m_MinSize: 8
+    m_MinSize: 1
     m_MaxSize: 40
     m_Alignment: 0
     m_AlignByGeometry: 0
@@ -8798,6 +8875,7 @@ GameObject:
   - component: {fileID: 1107075211}
   - component: {fileID: 1103683945}
   - component: {fileID: 1104781993}
+  - component: {fileID: 1106984300}
   m_Layer: 0
   m_Name: Net.001
   m_TagString: Untagged
@@ -8805,6 +8883,19 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!65 &1106984300
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1106984299}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.34640032, y: 0.20923112, z: 0.3729637}
+  m_Center: {x: -0.093165666, y: 0.091465555, z: 0.07729255}
 --- !u!1 &1106984301
 GameObject:
   m_ObjectHideFlags: 0
@@ -10506,7 +10597,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1106984209}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 6.6942053, y: 0, z: 3.4078193}
+  m_LocalPosition: {x: 6.762, y: 0.01, z: 3.424}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 775198940}
@@ -11212,7 +11303,7 @@ GameObject:
   - component: {fileID: 1280915190}
   - component: {fileID: 1280915189}
   m_Layer: 5
-  m_Name: DialogoDaro
+  m_Name: NombreDaro
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11234,7 +11325,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -4.6, y: 0.6}
+  m_AnchoredPosition: {x: -4.6, y: 0.4}
   m_SizeDelta: {x: 160, y: 30}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1280915189
@@ -11244,7 +11335,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1280915187}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 708705254, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -11645,7 +11736,7 @@ GameObject:
   - component: {fileID: 1737217785}
   - component: {fileID: 1737217784}
   m_Layer: 5
-  m_Name: DialogoDaro
+  m_Name: FondoDialogo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -11663,13 +11754,14 @@ RectTransform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 396154}
+  - {fileID: 39585207}
   m_Father: {fileID: 1993961035}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -141.8, y: -123}
-  m_SizeDelta: {x: 254, y: 50}
+  m_AnchoredPosition: {x: -255, y: -147.4}
+  m_SizeDelta: {x: 261.7445, y: 70.65216}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1737217784
 MonoBehaviour:
@@ -11678,7 +11770,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737217782}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: -98529514, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
@@ -11723,8 +11815,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Daro: {fileID: 1841487987}
-  dialogo: {fileID: 1737217782}
-  siguiente: {fileID: 0}
+  dialogo: {fileID: 39585208}
+  Cartel: {fileID: 1737217784}
+  fondoNombre: {fileID: 396155}
+  Nombre: {fileID: 1280915189}
+  AvanzarDialogo: {fileID: 905458569}
+  counter: 0
+  dialogoArray:
+  - Hola amigo!
+  - "No s\xE9 si te enteraste, probablemnente si, pero..."
+  - Ahora en un rato es empatizando!
+  - Y los meps no llegaron...
+  - Tengo una idea!
+  - Podrias ayudarme a buscar los proyectos mas importantes?
+  - Tengo que... ordenarlos...
+  - "\xBFPorque seguis aca? Anda!"
 --- !u!1 &1827985932
 GameObject:
   m_ObjectHideFlags: 0
@@ -12108,7 +12213,13 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 7036636158107559079, guid: 75de62f9478685d4b94ac9d5b3c8e86e,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 1965191567236866946, guid: 75de62f9478685d4b94ac9d5b3c8e86e, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 75de62f9478685d4b94ac9d5b3c8e86e, type: 3}
 --- !u!1 &1986718824
 GameObject:
@@ -12203,7 +12314,7 @@ MonoBehaviour:
   m_Script: {fileID: 1980459831, guid: f70555f144d8491a825f0804e09c671c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_UiScaleMode: 0
+  m_UiScaleMode: 1
   m_ReferencePixelsPerUnit: 100
   m_ScaleFactor: 1
   m_ReferenceResolution: {x: 800, y: 600}
