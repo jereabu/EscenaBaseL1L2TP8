@@ -7,6 +7,10 @@ TagManager:
   - Silla
   - mesa
   - NPC
+  - Llave
+  - Cerradura
+  - LlaveAmarilla
+  - LlaveRosa
   layers:
   - Default
   - TransparentFX
@@ -17,8 +21,8 @@ TagManager:
   - 
   - 
   - PostProcessing
-  - 
-  - 
+  - Llave
+  - Cerradura
   - 
   - 
   - 
