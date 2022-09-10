@@ -12,8 +12,9 @@ public class DialogoDaro : MonoBehaviour
     public Image fondoNombre;
     public Text Nombre;
     public Text AvanzarDialogo;
+    [SerializeField] bool enRango;
     [SerializeField] int counter = 0;
-    [SerializeField] string[] dialogoArray = new string[] {"Hola amigo!", "No sé si te enteraste, probablemnente si, pero...", "Ahora en un rato es empatizando!", "Y los meps no llegaron...", "Tengo una idea!", "Podrias ayudarme a buscar los proyectos mas importantes?", "Tengo que... ordenarlos...", "¿Porque seguis aca? Anda!" }; 
+    [SerializeField] string[] dialogoArray = new string[] {"Hola amigo!", "No sé si te enteraste, probablemennte si, pero...", "Ahora en un rato es empatizando!", "Y los meps no llegaron...", "Tengo una idea!", "Podrias ayudarme a buscar los proyectos mas importantes?", "Tengo que... ordenarlos...", "¿Porque seguis aca? Anda!" }; 
     // Start is called before the first frame update
     void Start()
     {
@@ -23,43 +24,32 @@ public class DialogoDaro : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
-    }
-    void OnTriggerEnter()
-    {
-        if (counter >= 7)
+        if (enRango = true)
+        {
+            if (Input.GetKeyDown(KeyCode.E) && counter <= 6)
+            {
+                counter++;
+                Debug.Log(counter);
+                dialogo.text = dialogoArray[counter];
+            }
+        }
+        if(counter >= 7)
         {
             AvanzarDialogo.enabled = false;
         }
-        else
-        {
-            AvanzarDialogo.enabled = true;
-        }
+    }
+    void OnTriggerEnter()
+    {
         Cartel.enabled = true;
         dialogo.enabled = true;
         fondoNombre.enabled = true;
         Nombre.enabled = true;
-        
-        Debug.Log("entraste");
-        
-           
+        AvanzarDialogo.enabled = true;
+        Debug.Log("entraste");          
     }
     void OnTriggerStay()
     {
-        if (Input.GetKeyDown(KeyCode.E) && counter <= 7)
-        {
-            Debug.Log("clickeaste");
-            Debug.Log(dialogoArray[counter]);
-            dialogo.text = dialogoArray[counter];
-            counter++;
-            Debug.Log(counter);
-            enRango = true;
-            
-        }   
-        if (counter <= 7)
-        {
-            AvanzarDialogo.enabled = false;
-        }
+        enRango = true;   
     }
     void OnTriggerExit()
     {
