@@ -22,12 +22,14 @@ public class LlaveRosaAgarrar : MonoBehaviour
     {
         if(rangoLlave == true)
         {
+            agarrar.enabled = true;
             if(Input.GetKeyDown(KeyCode.E))
             {
                 Llave.SetActive(false);
                 LlaveUI.SetActive(true);
                 LlaveUIImage.enabled = true;
                 agarrar.enabled = false;
+                rangoLlave = false;
             }
         }
         if(Llave.activeInHierarchy == false)

@@ -22,6 +22,7 @@ public class LlaveAmarillaAgarrar : MonoBehaviour
     {
         if(rangoLlave == true)
         {
+            agarrar.enabled = true;
             if(Input.GetKeyDown(KeyCode.E))
             {
                 Llave.SetActive(false);
@@ -35,6 +36,7 @@ public class LlaveAmarillaAgarrar : MonoBehaviour
             LlaveUI.SetActive(true);
             LlaveUIImage.enabled = true;
             agarrar.enabled = false;
+            rangoLlave = false;
         }
     }
     

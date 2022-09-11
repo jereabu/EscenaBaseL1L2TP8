@@ -4,5 +4,14 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Explosion.unity
+    guid: 4fa388a970e48794a9b449ec428a4bb6
+  - enabled: 1
+    path: Assets/Scenes/Tic L1 L2 controller.unity
+    guid: 3329a9759f39477488b14835953caa79
+  - enabled: 1
+    path: Assets/Scenes/Victoria.unity
+    guid: 3d2dec11c143f7b4e91776c179e871ff
   m_configObjects: {}

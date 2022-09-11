@@ -11,6 +11,10 @@ TagManager:
   - Cerradura
   - LlaveAmarilla
   - LlaveRosa
+  - LlaveVerde
+  - ArmadorDeProyectos
+  - LlaveCeleste
+  - Salida
   layers:
   - Default
   - TransparentFX
@@ -23,7 +27,7 @@ TagManager:
   - PostProcessing
   - Llave
   - Cerradura
-  - 
+  - Salida
   - 
   - 
   - 
