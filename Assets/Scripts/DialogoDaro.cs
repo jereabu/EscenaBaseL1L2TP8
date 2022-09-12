@@ -98,7 +98,7 @@ public class DialogoDaro : MonoBehaviour
             //rounded = Mathf.Round(customTime * 100f) / 100f;
             //Counter.text = rounded.ToString();
             Counter.enabled = true;
-            Counter.text = customTime.ToString("2F");
+            Counter.text = customTime.ToString("F2");
             if(!sonido.isPlaying)
             {
                 sonido.Play();
