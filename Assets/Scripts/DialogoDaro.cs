@@ -27,17 +27,19 @@ public class DialogoDaro : MonoBehaviour
     public Text Armar;
     [SerializeField] bool MegaProyecto;
     public Text AgarrarDaro;
-    [SerializeField] float customTime;
+    [SerializeField] float customTime = 30;
     [SerializeField] bool isCounting;
     [SerializeField] Text Counter;
     [SerializeField] float rounded;
     public AudioSource sonido;
     public GameObject CerraduraCeleste;
     public GameObject CerraduraCeleste2;
+    [SerializeField] Text ProyectoExplosion;
     // Start is called before the first frame update
     void Start()
     {
         enRango = false;
+        customTime = 30f;
     }
 
     // Update is called once per frame
@@ -71,7 +73,7 @@ public class DialogoDaro : MonoBehaviour
             {
                 dialogo.text = "AHHHHH EL PROYECTO ESTA COMPLETO! PERO VA A EXPLOTAR! SACAME DE ACA!";
                 AgarrarDaro.enabled = true;
-                sonido.Play();
+                ProyectoExplosion.enabled = true;
                 isCounting = true;
                 Armable = false;
                 Armar.enabled = false;
@@ -92,11 +94,17 @@ public class DialogoDaro : MonoBehaviour
         }
         if (isCounting)
         {
-            customTime += Time.deltaTime;
-            rounded = Mathf.Round(customTime * 100f) / 100f;
-            Counter.text = rounded.ToString();
+            customTime -= Time.deltaTime;
+            //rounded = Mathf.Round(customTime * 100f) / 100f;
+            //Counter.text = rounded.ToString();
+            Counter.enabled = true;
+            Counter.text = customTime.ToString("2F");
+            if(!sonido.isPlaying)
+            {
+                sonido.Play();
+            }
         }
-        if (customTime>30)
+        if (customTime <= 0)
         {
             isCounting = false;
             SceneManager.LoadScene("Explosion");

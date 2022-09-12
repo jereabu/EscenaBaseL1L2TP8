@@ -18,12 +18,12 @@ public class CerraduraCeleste : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-      if(Input.GetKeyDown(KeyCode.E) && Abrible == true)
-    {
-        Debug.Log("Clickeaste");
-        Contenedor.SetActive(false); 
-        Abrir.enabled = false;
-    }
+        if(Input.GetKeyDown(KeyCode.E) && Abrible == true)
+        {
+            Debug.Log("Clickeaste");
+            Contenedor.SetActive(false); 
+            Abrir.enabled = false;
+        }
     }
     void OnTriggerEnter(Collider col)
     {    
@@ -38,7 +38,7 @@ public class CerraduraCeleste : MonoBehaviour
             }
             else
             {
-            Necesitas.enabled = true;
+                Necesitas.enabled = true;
             }                  
         }
         

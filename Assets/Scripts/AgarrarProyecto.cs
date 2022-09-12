@@ -15,7 +15,6 @@ public class AgarrarProyecto : MonoBehaviour
     {
         
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -26,11 +25,11 @@ public class AgarrarProyecto : MonoBehaviour
             {
                 Debug.Log("Clickeaste");
                 gameObject.SetActive(false);
-                
             }
         }
         if (Proyecto.activeInHierarchy == false)
         {
+            Sonido.Play();
             agarrarProyecto.enabled = false;
             ProyectoUI.SetActive(true);
         }
